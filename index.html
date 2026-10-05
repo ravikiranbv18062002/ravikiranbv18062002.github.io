@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ravikiran//dev | Backend Engineer, AI & LLM Systems</title>
-<meta name="description" content="B V Ravikiran, backend engineer building FastAPI services and agentic AI workflows. Banglore, India.">
+<title>ravikiran//dev | Backend Engineer, AI & LLM Systems</title>
+<meta name="description" content="B V Ravikiran, backend engineer building FastAPI services and agentic AI workflows. Chennai, India.">
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@1&amp;display=swap">
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=excon@400,700&amp;display=swap">
 <style>
@@ -63,19 +63,19 @@ footer{margin-top:80px;border-top:1px solid #1d3a18;padding:22px;text-align:cent
 </style></head><body>
 <div class="hero" id="top">
 <div class="floor" aria-hidden="true"><i></i></div><div class="vig" aria-hidden="true"></div><div class="scan" aria-hidden="true"></div>
-<header><a class="brand" href="#top">Ravikiran//dev</a><nav aria-label="Main"><a href="#work">Work</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></header>
-<div class="mid"><h1 aria-label="Ravi kiran"><span data-t="Ravi" aria-hidden="true">Ravi</span><span data-t="kiran" aria-hidden="true">kiran</span></h1></div>
+<header><a class="brand" href="#top">ravikiran//dev</a><nav aria-label="Main"><a href="#work">Work</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></header>
+<div class="mid"><h1 aria-label="ravi kiran"><span data-t="ravi" aria-hidden="true">ravi</span><span data-t="kiran" aria-hidden="true">kiran</span></h1></div>
 <div class="bottom">
 <div><p class="tag">backend + ai agents</p>
-<ul class="term" aria-label="Boot log"><li>starting Ravikiran.sys</li><li>loading 45 agents… ok</li><li>syncing fabric api… ok</li><li>welcome, operator_</li></ul></div>
-<div class="btns"><a class="btn" href="#work">[enter]</a><a class="btn" href="#contact">[contact]</a></div>
+<ul class="term" aria-label="Boot log"><li>starting ravikiran.sys</li><li>loading 45 agents… ok</li><li>syncing fabric api… ok</li><li>welcome, operator_</li></ul></div>
+<div class="btns"><a class="btn" href="#work">[enter]</a><a class="btn" href="#contact">[contact]</a><a class="btn" href="Ravikiran_BV_Resume.pdf" target="_blank" rel="noopener">[resume]</a></div>
 </div></div>
 
 <main>
 <section id="work"><h2>Work</h2><div>
 <h3>Automating report migration at enterprise scale.</h3>
 <div class="stats"><div><b>45+</b>AI agents</div><div><b>15</b>agentic workflows</div><div><b>50%</b>less manual coding</div><div><b>2+</b>years</div></div>
-<div class="job"><h4>Associate Engineer, Ascendion</h4><p class="meta">Insights Modernization Studio · July 2024 to present · Banglore</p>
+<div class="job"><h4>Associate Engineer, Ascendion</h4><p class="meta">Insights Modernization Studio · July 2024 to present · Chennai</p>
 <ul class="l"><li>Built Python, FastAPI and PostgreSQL services for a report migration platform that mixes hand-written integrations with agentic AI.</li>
 <li>Designed 45+ AI agents and 15 workflows on GPT, Claude and OpenAI APIs, cutting manual coding effort by 50%.</li>
 <li>Built REST integrations, including Microsoft Fabric APIs, to extract report metadata automatically.</li>
@@ -96,13 +96,21 @@ footer{margin-top:80px;border-top:1px solid #1d3a18;padding:22px;text-align:cent
 
 <section id="contact"><h2>Contact</h2><div>
 <h3>Open to backend and AI engineering roles.</h3>
-<a class="mail" href="mailto:Ravikiranbv1806@gmail.com">Ravikiranbv1806@gmail.com</a>
-<div class="links"><a href="tel:+919025465892">+91 90254 65892</a><a href="https://github.com/Ravikiranbv18062002">GitHub</a><a href="https://linkedin.com/in/Ravi-kiran-43528b20b">LinkedIn</a></div>
+<a class="mail" href="mailto:ravikiranbv1806@gmail.com">ravikiranbv1806@gmail.com</a>
+<div class="links"><a href="Ravikiran_BV_Resume.pdf" download>Download resume (PDF)<span id="resume-date"></span></a><a href="tel:+919025465892">+91 90254 65892</a><a href="https://github.com/ravikiranbv18062002">GitHub</a><a href="https://linkedin.com/in/ravi-kiran-43528b20b">LinkedIn</a></div>
 </div></section>
 </main>
-<footer>© 2026 B V Ravikiran · Banglore, India</footer>
+<footer>© 2026 B V Ravikiran · Chennai, India</footer>
 <script>
 const hero=document.querySelector('.hero');
 new IntersectionObserver(([e])=>hero.classList.toggle('paused',!e.isIntersecting),{threshold:.01}).observe(hero);
+// Show when the resume PDF was last committed in this repo. Fails silently if GitHub's API is unreachable.
+const REPO='ravikiranbv18062002/ravikiranbv18062002.github.io',FILE='Ravikiran_BV_Resume.pdf';
+fetch(`https://api.github.com/repos/${REPO}/commits?path=${FILE}&per_page=1`)
+ .then(r=>r.ok?r.json():[]).then(c=>{
+  if(!c[0])return;
+  const d=new Date(c[0].commit.committer.date).toLocaleDateString('en',{month:'short',year:'numeric'});
+  document.getElementById('resume-date').textContent=` (updated ${d})`;
+ }).catch(()=>{});
 </script>
 </body></html>
