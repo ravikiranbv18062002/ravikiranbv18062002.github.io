@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>B V Ravikiran | Backend Engineer, AI & LLM Systems</title>
+<meta name="description" content="Backend engineer building FastAPI services and agentic AI workflows. 45+ AI agents shipped at Ascendion. Based in Chennai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#edf1f5;--ink:#101a2b;--mute:#566177;--line:#c7d0dc;--acc:#2447f5;--card:#f7f9fb;--accink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1522;--ink:#e8edf6;--mute:#93a0b8;--line:#25314a;--acc:#7b94ff;--card:#141d2f;--accink:#0e1522}}
+:root[data-theme="dark"]{--bg:#0e1522;--ink:#e8edf6;--mute:#93a0b8;--line:#25314a;--acc:#7b94ff;--card:#141d2f;--accink:#0e1522}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.125rem/1.6 'Newsreader',Georgia,serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.sans{font-family:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;gap:16px}
+nav b{font:800 1.05rem 'Bricolage Grotesque',sans-serif}
+nav div{display:flex;gap:20px;font:500 .95rem 'Bricolage Grotesque',sans-serif;overflow-x:auto}
+nav a{text-decoration:none;color:var(--mute);white-space:nowrap}nav a:hover{color:var(--ink)}
+.hero{padding:88px 0 64px}
+.hero .tag{display:inline-block;font:500 .95rem 'Bricolage Grotesque',sans-serif;border:1px solid var(--line);background:var(--card);padding:6px 14px;border-radius:99px;margin:0 0 28px}
+.hero .tag i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--acc);margin-right:8px}
+h1{font-size:clamp(2.6rem,7.5vw,5.6rem);line-height:1;letter-spacing:-.035em;font-weight:800;margin:0 0 28px;max-width:15ch}
+.lede{max-width:56ch;color:var(--mute);font-size:1.25rem;margin:0 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font:700 1rem 'Bricolage Grotesque',sans-serif;padding:13px 22px;border-radius:8px;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.p{background:var(--acc);border-color:var(--acc);color:var(--accink)}
+.flow{display:flex;align-items:stretch;gap:0;margin:56px 0 0;font:500 .95rem/1.3 'Bricolage Grotesque',sans-serif;flex-wrap:wrap}
+.flow span{flex:1 1 160px;border:1.5px solid var(--ink);padding:14px 16px;background:var(--card);margin-right:-1.5px}
+.flow span:nth-child(2){background:var(--acc);border-color:var(--acc);color:var(--accink)}
+.flow small{display:block;font:400 .85rem 'Newsreader',serif;opacity:.8;margin-top:3px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats div{padding:24px 20px 24px 0}
+.stats b{display:block;font:800 clamp(2rem,4vw,3rem)/1 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em}
+.stats span{color:var(--mute);font-size:1rem}
+section{padding:80px 0 0}
+.sec{display:grid;grid-template-columns:200px 1fr;gap:32px}
+.sec>h2{font-size:1.1rem;margin:6px 0 0;color:var(--mute);font-weight:500}
+.sec .body h3.big{font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;letter-spacing:-.025em;font-weight:700;margin:0 0 32px;max-width:22ch}
+.job{border:1.5px solid var(--ink);background:var(--card);padding:28px;margin-bottom:20px}
+.job h4,.proj h4{font:700 1.4rem 'Bricolage Grotesque',sans-serif;margin:0}
+.meta{color:var(--mute);font-size:1rem;margin:4px 0 14px}
+.job ul{margin:0 0 16px;padding-left:20px}.job li{margin-bottom:8px;max-width:70ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.chips li{font:500 .88rem 'Bricolage Grotesque',sans-serif;border:1px solid var(--line);padding:4px 10px;border-radius:99px;background:var(--bg);margin:0}
+.proj{padding:26px 0;border-top:1px solid var(--line)}
+.proj p{margin:8px 0 14px;max-width:70ch}
+.proj .k{font:500 .95rem 'Bricolage Grotesque',sans-serif;color:var(--acc)}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.skills div{padding:18px 0;border-top:1px solid var(--line)}
+.skills h3{font-size:1.1rem;margin:0 0 10px}
+ol.tl{list-style:none;margin:0;padding:0}
+ol.tl li{display:grid;grid-template-columns:90px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+ol.tl .y{font:800 1.3rem 'Bricolage Grotesque',sans-serif}
+ol.tl h3{font-size:1.2rem;margin:0 0 4px}ol.tl p{margin:0;color:var(--mute)}
+.certs{list-style:none;padding:0;margin:0}
+.certs li{padding:18px 0;border-top:1px solid var(--line);font:700 1.2rem 'Bricolage Grotesque',sans-serif}
+.certs li span{display:block;font:400 1rem 'Newsreader',serif;color:var(--mute)}
+.contact a.mail{font:800 clamp(1.5rem,4.5vw,3rem) 'Bricolage Grotesque',sans-serif;letter-spacing:-.03em;color:var(--acc);word-break:break-all}
+.contact ul{list-style:none;padding:0;margin:28px 0 0;display:flex;gap:24px;flex-wrap:wrap;font:500 1rem 'Bricolage Grotesque',sans-serif}
+footer{margin-top:96px;border-top:1px solid var(--line);padding:24px 0 40px;color:var(--mute);font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero>.wrap>*{animation:up .6s cubic-bezier(.2,.7,.2,1) both}
+.hero>.wrap>*:nth-child(2){animation-delay:.08s}.hero>.wrap>*:nth-child(3){animation-delay:.16s}.hero>.wrap>*:nth-child(4){animation-delay:.24s}.hero>.wrap>*:nth-child(5){animation-delay:.32s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+@media (max-width:760px){.sec{grid-template-columns:1fr;gap:12px}.stats{grid-template-columns:1fr 1fr}.skills{grid-template-columns:1fr}.hero{padding-top:56px}nav b{display:none}ol.tl li{grid-template-columns:70px 1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>B V Ravikiran</b><div><a href="#work">Work</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#journey">Journey</a><a href="#certs">Certifications</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<p class="tag"><i></i>Backend engineer at Ascendion, Chennai</p>
+<h1>I build backends where AI agents do the busywork.</h1>
+<p class="lede">I'm Ravikiran, a backend engineer with 2+ years of experience in Python services and agentic AI workflows. I design FastAPI platforms that use LLMs to turn slow, manual migration work into automated pipelines.</p>
+<div class="btns"><a class="btn p" href="#work">See my work</a><a class="btn" href="#contact">Get in touch</a></div>
+<div class="flow" aria-label="Report migration pipeline">
+<span>Source report<small>Metadata pulled via Microsoft Fabric REST APIs</small></span>
+<span>AI agents<small>GPT, Claude and OpenAI orchestration</small></span>
+<span>Converted report<small>Delivered through a FastAPI platform</small></span>
+</div>
+</div></header>
+
+<div class="wrap"><div class="stats">
+<div><b>45+</b><span>AI agents built</span></div>
+<div><b>15</b><span>agentic workflows</span></div>
+<div><b>50%</b><span>less manual coding effort</span></div>
+<div><b>2+</b><span>years in production</span></div>
+</div></div>
+
+<section id="work"><div class="wrap sec"><h2>Work</h2><div class="body">
+<h3 class="big">Automating report migration at enterprise scale.</h3>
+<article class="job">
+<h4>Associate Engineer, Ascendion</h4>
+<p class="meta">Insights Modernization Studio (IMS) · July 2024 to present · Chennai</p>
+<ul>
+<li>Built backend services in Python, FastAPI and PostgreSQL for a report migration and modernization platform, mixing hand-written Python integrations with agentic AI automation.</li>
+<li>Designed 45+ AI agents and 15 agentic workflows on GPT, Claude and OpenAI APIs, cutting manual coding effort by 50% on multi-step migration tasks.</li>
+<li>Built REST integrations, including Microsoft Fabric REST APIs, to extract report metadata automatically and support end-to-end migration.</li>
+<li>Wired LLM workflows into the FastAPI platform to transform reports automatically, reducing manual effort and speeding up delivery.</li>
+<li>Containerized the app with Docker and deployed it to Azure App Service, with CI/CD and collaboration through Git and Azure Repos.</li>
+</ul>
+<ul class="chips"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Agentic AI</li><li>Claude</li><li>OpenAI</li><li>Docker</li><li>Azure</li></ul>
+</article>
+</div></div></section>
+
+<section id="projects"><div class="wrap sec"><h2>Projects</h2><div class="body">
+<h3 class="big">Things I built on my own, end to end.</h3>
+<article class="proj"><h4>DocuMind AI</h4><p class="meta">Smart document copilot and retrieval assistant</p>
+<p>A full-stack RAG chatbot for PDFs, built with FastAPI, React and PostgreSQL (pgvector) and tested on 50+ documents. It answers questions through semantic search, using Llama 3.1 8B on Groq for fast responses and Sentence Transformers for embeddings. Runs as three Docker Compose services (backend, frontend, database) on AWS EC2, with a smaller image from CPU-only inference.</p>
+<ul class="chips"><li>RAG</li><li>FastAPI</li><li>React</li><li>pgvector</li><li>LangChain</li><li>Groq</li><li>Docker Compose</li><li>AWS EC2</li></ul></article>
+<article class="proj"><h4>Stock Assistant</h4><p class="meta">RAG pipeline for stock research</p>
+<p>Three independently deployable FastAPI services (ingestion, retrieval, chat) share one Postgres and pgvector database. A LangChain LCEL router decides whether a question needs price data from yfinance, news from NewsAPI, or both, then Groq writes a grounded answer. The chat service adds JWT login, saved per-conversation memory, and follow-up questions resolved by query condensing. Built for Docker Compose locally and AWS ECS/EKS in the cloud, with logging ready for CloudWatch.</p>
+<ul class="chips"><li>LangChain LCEL</li><li>Microservices</li><li>JWT</li><li>pgvector</li><li>Groq</li><li>AWS ECS/EKS</li></ul></article>
+<article class="proj"><h4>TodoList</h4><p class="meta">FastAPI-focused backend app</p>
+<p>A full-stack to-do app with 12+ REST endpoints, cookie-based session login, and PBKDF2-SHA256 password hashing through Passlib. Per-user authorization keeps each person's tasks private across all CRUD operations. Structured logging covers requests, sign-ins and errors. Deployed with Docker on AWS EC2, using SQLite locally and PostgreSQL on the server through environment-driven config.</p>
+<ul class="chips"><li>FastAPI</li><li>SQLAlchemy</li><li>Passlib</li><li>Docker</li><li>AWS EC2</li></ul></article>
+</div></div></section>
+
+<section id="skills"><div class="wrap sec"><h2>Skills</h2><div class="body">
+<h3 class="big">The tools I reach for.</h3>
+<div class="skills">
+<div><h3>Backend</h3><ul class="chips"><li>Python</li><li>FastAPI</li><li>Docker</li><li>PostgreSQL</li><li>SQL</li></ul></div>
+<div><h3>AI engineering</h3><ul class="chips"><li>LLM orchestration</li><li>Agentic AI</li><li>RAG</li><li>Prompt engineering</li><li>LangChain</li><li>OpenAI</li><li>Claude</li><li>GitHub Copilot</li></ul></div>
+<div><h3>Cloud</h3><ul class="chips"><li>Azure</li><li>AWS</li></ul></div>
+<div><h3>Delivery</h3><ul class="chips"><li>CI/CD</li><li>Git</li><li>Azure Repos</li><li>REST API design</li></ul></div>
+</div></div></div></section>
+
+<section id="journey"><div class="wrap sec"><h2>Journey</h2><div class="body">
+<h3 class="big">From computer science student to shipping AI agents.</h3>
+<ol class="tl">
+<li><span class="y">2020</span><div><h3>Started B.E. in Computer Science</h3><p>Sri Krishna College of Engineering and Technology, Coimbatore.</p></div></li>
+<li><span class="y">2024</span><div><h3>Graduated with a CGPA of 8.08</h3><p>Finished the degree and moved straight into industry.</p></div></li>
+<li><span class="y">2024</span><div><h3>Joined Ascendion as an Associate Engineer</h3><p>Began building the backend for the Insights Modernization Studio.</p></div></li>
+<li><span class="y">Now</span><div><h3>Running 45+ agents across 15 workflows</h3><p>Automating multi-step report migration with LLMs on Azure.</p></div></li>
+</ol></div></div></section>
+
+<section id="certs"><div class="wrap sec"><h2>Certifications</h2><div class="body">
+<ul class="certs">
+<li>Microsoft Azure Fundamentals (AZ-900)<span>Microsoft</span></li>
+<li>Claude AI Fluency: Framework<span>Claude</span></li>
+<li>Introduction to MCP<span>Claude</span></li>
+</ul></div></div></section>
+
+<section id="contact" class="contact"><div class="wrap sec"><h2>Say hello</h2><div class="body">
+<h3 class="big">Open to backend and AI engineering roles.</h3>
+<a class="mail" href="mailto:ravikiranbv1806@gmail.com">ravikiranbv1806@gmail.com</a>
+<ul><li><a href="tel:+919025465892">+91 90254 65892</a></li><li><a href="https://github.com/ravikiranbv18062002" rel="noopener">GitHub</a></li><li><a href="https://linkedin.com/in/ravi-kiran-43528b20b" rel="noopener">LinkedIn</a></li></ul>
+</div></div></section>
+
+<footer><div class="wrap"><span>© 2026 B V Ravikiran</span><span>Chennai, India</span></div></footer>
+</body>
+</html>
